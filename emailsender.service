@@ -1,0 +1,18 @@
+[Unit]
+Description=emailsender
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5s
+Environment=FROM="YOUR MAIL ID"
+Environment=PASS="YOUR MAIL PASSWORD"
+Environment=DBHOST="localhost"
+Environment=DBUSER="root"
+Environment=DBPASS="password"
+Environment=DBPORT="3306"
+Environment=DB="emailsender"
+ExecStart=/home/anuj/Desktop/Assignment/app
+
+[Install]
+WantedBy=multi-user.target
